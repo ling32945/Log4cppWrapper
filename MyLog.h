@@ -19,7 +19,6 @@ private:
     MyLog();
 
     static MyLog *plog_;
-    //log4cpp::Category &category_ref_;
     log4cpp::Category &table;
 };
 
@@ -45,7 +44,6 @@ extern MyLog &logger;
 #endif
 
 //#define LogTableError(msg) logger.tableError(logSuffix(msg))
-//#define LogTableError(msg, ...) printf(msg, ## __VA_ARGS__)
 #define LogTableError(msg, ...)                 \
     do {                                        \
         size_t size = 1024;                     \
