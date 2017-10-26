@@ -1,5 +1,4 @@
 #include "MyLog.h"
-#include <QDir>
 #include<log4cpp/PropertyConfigurator.hh>
 
 MyLog* MyLog::plog_ = NULL;
@@ -22,11 +21,6 @@ void MyLog::destory() {
 MyLog::MyLog() :
     table(log4cpp::Category::getInstance(std::string("Sgk.Table")))
 {
-
-    //QString appDirPath = QCoreApplication::applicationDirPath();
-    //QString configPath = appDirPath + QString("/../../..") + QString("/Plug-ins.localized/Sgk/Configuration/");
-    QString currentWorkDirectory = QDir::currentPath();
-    QString configPath = currentWorkDirectory + QString("/Plug-ins.localized/Sgk/Configuration/");
     QString logConfigFileName = "log4cpp.properties";
     std::string logConfigFile = (configPath + logConfigFileName).toStdString();
 
