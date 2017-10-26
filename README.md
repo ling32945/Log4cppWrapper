@@ -1,4 +1,4 @@
-# Log4cppWrapper
+# Log4cpp Wrapper
 
 ## Introduction
 There are many advantange of using Log4cpp, but if we don't encapsulate it, it's not convient to use it, like some funciton name are long. So we need encapsulate it, Easier using log4cpp like using funciton printf().
